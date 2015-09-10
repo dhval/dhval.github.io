@@ -8,11 +8,11 @@ body:before, body:after {
     content: "";
 }
 body:before {
-   background: url(http://dhval.github.io/img/navbg.png);
+   background: url(/img/navbg.png);
   top: 0;
 }
 body {
-    background: url(http://dhval.github.io/img/4x4-light.png);  
+    background: url(/img/4x4-light.png);  
 }
 div.navbar {
   height: 40px;

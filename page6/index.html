@@ -2,18 +2,14 @@
 <html>
 
 <head>
-    <title>Using spring property place holder – Dhval Mudawal – Rants</title>
+    <title>Dhval Mudawal – Rants</title>
     <meta charset="utf-8" />
 <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> 
-<meta name="description" content="We all freqently, use spring property holder in our spring based applications. But there are few cavets that are worth revisiting.
-" />
-<meta property="og:description" content="We all freqently, use spring property holder in our spring based applications. But there are few cavets that are worth revisiting.
-" /> 
+<meta name="description" content="Rants">
+<meta property="og:description" content="Rants" /> 
 <meta name="author" content="Dhval Mudawal" /> 
-<meta property="og:title" content="Using spring property place holder" />
-<meta property="twitter:title" content="Using spring property place holder" /> 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -41,9 +37,8 @@
             <div class="site-info">
                 <h1 class="site-name"><a href="/">Dhval Mudawal</a></h1>
                 <p class="site-description">
-                     Using spring property place holder 
-                     | Updated: March 03, 2014
                     
+                     Modified on September 10, 2015 
                 </p>
             </div>
             <nav>
@@ -54,56 +49,113 @@
     </div>
 
     <div id="main" role="main" class="container">
-        <article class="post">
-  <div class="date">
-	
-  </div>
+        <!-- This loops through the paginated posts -->
 
-  <div class="entry">
-    <p>We all freqently, use spring property holder in our spring based applications. But there are few cavets that are worth revisiting.</p>
 
-<p>Old Way</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;context:property-placeholder location=&quot;application.properties&quot;/&gt;
-</code></pre></div>
-<p>Spring 3.1</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">---spring.xml---
 
-&lt;bean class=&quot;org.springframework.context.support.PropertySourcesPlaceholderConfigurer&quot;&gt;
-  &lt;property name=&quot;locations&quot;&gt;
-   &lt;list&gt;
-    &lt;value&gt;classpath:application.properties&lt;/value&gt;
-    &lt;value&gt;classpath:rabbitmq.properties&lt;/value&gt;
-   &lt;/list&gt;
-&lt;/property&gt;
-  &lt;property name=&quot;ignoreUnresolvablePlaceholders&quot; value=&quot;true&quot;/&gt;
-&lt;/bean&gt;
-</code></pre></div>
-<p>The real goodness happens below. The @Autowired together with @Value let spring initilize component with w/o no argument constructor. Note &#39;:&#39; in @Value is used to specify default value.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@Component
-public class QueueConsumer extends EndPoint implements Runnable, Consumer {
-
-    @Autowired
-    public QueueConsumer( @Value(&quot;${rabbit.host:192.168.0.112}&quot;) String host,
-                          @Value(&quot;${rabbit.endpoint:queue}&quot;) String endPointName) throws IOException{
-        super(host, endPointName);
-    }
-
-...
-}    
-</code></pre></div>
-<p>And lastly, obtaining properties via the new Environment APIs.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@Autowired
-private Environment env;
-
-dataSource.setUrl(env.getProperty(&quot;jdbc.url&quot;));
-</code></pre></div>
-<p><a href="http://www.baeldung.com/2012/02/06/properties-with-spring/">Read ...</a></p>
-
-  </div>
-
-  
+<article class="post">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Big-Oh Notation
+			
+			<a style="position: relative;top: -7px;" class="btn btn-primary pull-right" href="https://www.evernote.com/shard/s11/sh/137f92de-c11d-4be1-8355-ac2994e30360/500e8bba9537e3dde4d378b22e655413/">
+				<span class="badge">View on Evernote.com</span>
+			</a>
+			
+        </div>
+        <div class="panel-body entry">
+            <p>
+                Benchmarks vs Big-oh notation isn't always useful
+            </p>
+        </div>
+        <div class="panel-footer">
+            <p>
+                <a class="btn btn-primary btn-lg active" role="button" 
+                	href="/Big.Oh.Notation.enote/" class="read-more">Read More</a>
+                <span class="date">
+            Created: November 17, 2009
+        </span>
+            </p>
+        </div>
+    </div>
 </article>
 
+<hr/>
+
+
+
+<article class="post">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Building this blog with Jekyll & Evernote
+			
+        </div>
+        <div class="panel-body entry">
+            <p>
+                I was able to build this blog using Jekyll templating in couple of hours. If you are interested, hit the link below.
+            </p>
+        </div>
+        <div class="panel-footer">
+            <p>
+                <a class="btn btn-primary btn-lg active" role="button" 
+                	href="/Setup" class="read-more">Read More</a>
+                <span class="date">
+            Created: March  1, 2009
+        </span>
+            </p>
+        </div>
+    </div>
+</article>
+
+<hr/>
+
+
+
+<!-- Pagination links -->
+<div>
+<ul class="pager">
+<!-- Previous link -->	
+  
+  	<li class="previous"><a href="/page5/">&larr; Newer</a></li>
+  
+<!-- First page link -->	
+	
+	<li><a href="/">1</a></li>
+	
+<!-- Page 2- link -->	
+	
+	  
+	  <li><a href="/page2">2</a></li>
+	  
+	
+	  
+	  <li><a href="/page3">3</a></li>
+	  
+	
+	  
+	  <li><a href="/page4">4</a></li>
+	  
+	
+	  
+	  <li><a href="/page5">5</a></li>
+	  
+	
+	  
+	  <li><span class="active">6</span></li>
+	  
+	
+<!-- Next link -->	
+  
+    <li class="next disabled"><a href="#">Older &rarr;</a></li>
+  
+  
+</ul>
+<!-- 
+  <li class="disabled"><a href="#">
+	<span class="page_number ">Page: 6 of 6</span>
+  </a></li>
+-->
+</div>
     </div>
     <div class="wrapper-footer">
     <div class="container">

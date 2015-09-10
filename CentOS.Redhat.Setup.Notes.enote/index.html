@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CentOS/ Redhat Setup Notes – Dhval Mudawal – Rants</title>
+    <meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> 
+<meta name="description" content="Nice tip to download Oracle JDK " />
+<meta property="og:description" content="Nice tip to download Oracle JDK " /> 
+<meta name="author" content="Dhval Mudawal" /> 
+<meta property="og:title" content="CentOS/ Redhat Setup Notes" />
+<meta property="twitter:title" content="CentOS/ Redhat Setup Notes" /> 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter Bootstrap css -->
+    <link href="/css/font-awesome.min.css">
+    <link href="/dist/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Your css -->
+    <link href="/css/base-war.css" rel="stylesheet">
+    <link href="/css/dhval.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!-- Vendor js -->
+    <script type="text/javascript" charset="utf-8" src="/dist/requirejs/require.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/dist/modernizr/modernizr.js"></script>
+    <!-- Your js -->
+    <script type="text/javascript" charset="utf-8" src="/js/require.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Dhval Mudawal - Rants" href="/feed.xml" />
+</head>
+
+<body>
+        <div class="container">
+        <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img class="img-thumbnail" src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+            <div class="site-info">
+                <h1 class="site-name"><a href="/">Dhval Mudawal</a></h1>
+                <p class="site-description">
+                     CentOS/ Redhat Setup Notes 
+                     | Updated: September 01, 2015
+                    
+                </p>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+    </div>
+
+    <div id="main" role="main" class="container">
+        <article class="post">
+  <div class="date">
+	 <a href="https://www.evernote.com/shard/s11/sh/0e274f01-ebef-4699-b765-893ef9b99768/f8050e3c420579027ef3efc7836a5f2a/">View on Evernote.com</a> 
+  </div>
+
+  <div class="entry">
+    <p><en-note>
+<table style="font-weight: inherit; font-style: inherit; font-variant: inherit; table-layout: fixed;width:63.020833333333336%;">
+<tbody>
+<tr>
+<td style="vertical-align: top;width:98.62258953168043%;">
+<div style="word-wrap: break-word;">
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div><span style="color: rgb(39, 39, 39);">My quick note on setting up my personnel Ubuntu Server nodes. I update this as I ran up with issues setting up any components.<br/></span></div>
+<div><b><span style="color: rgb(39, 39, 39);"><br/></span></b></div>
+<div><b><span style="color: rgb(39, 39, 39);">Nice tip to download Oracle JDK </span></b></div>
+<div dir="ltr"><b><span style="color: rgb(39, 39, 39);"><br/></span></b></div>
+<div dir="ltr"><span style="font-family: 'Andale Mono';"><span style="color: rgb(39, 39, 39);">wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw<em>e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; &quot;http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz&quot;</span></span></div>
+<div dir="ltr"><b><br/></b></div>
+<div>Configure environment</div>
+<div><br/></div>
+<div><span style="font-family: 'Andale Mono';"><span style="font-weight: normal;">/opt/jdk1.7.0</em>79/</span>&gt;</span></div>
+<div><br/></div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="font-family: 'Helvetica Neue';">alternatives --install /usr/bin/java java /opt/jdk1.7.0<em>79/bin/java 2</span></div>
+</div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="font-family: 'Helvetica Neue';">alternatives --config java</span></div>
+</div>
+</div>
+<div><span style="font-family: 'Andale Mono';">Reference -</span></div>
+<div><span style="font-family: 'Andale Mono';"><br/></span></div>
+<div><span style="font-family: 'Andale Mono';"><a href="http://tecadmin.net/steps-to-install-java-on-centos-5-6-or-rhel-5-6/">http://tecadmin.net/steps-to-install-java-on-centos-5-6-or-rhel-5-6/</a><br/></span></div>
+<div><b><span style="color: rgb(34, 34, 34);"><br/></span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);">Network troubleshooting</span></b></div>
+<div><span style="color: rgb(34, 34, 34);"><br/></span></div>
+<div><span style="color: rgb(34, 34, 34);">List all interfaces, even those are inactive using option all ( -a )</span></div>
+<div>
+<p style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></p>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+  <span style="font-family: 'Helvetica Neue';">i<span style="color: rgb(34, 34, 34);">fconfig -a </span></span> 
+</pre></div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div>
+<div>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+  <span style="font-family: 'Helvetica Neue';">i<span style="color: rgb(34, 34, 34);">p addr  </span></span> 
+</pre></div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></div>
+</div>
+<div><span style="color: rgb(34, 34, 34);">Path for network configuration file - <a href="https://gist.github.com/fernandoaleman/2172388">https://gist.github.com/fernandoaleman/2172388</a></span></div>
+<div>
+<div>
+<p style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></p>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+  <span style="font-family: 'Helvetica Neue';">/<span style="color: rgb(34, 34, 34);">etc/sysconfig/network-scripts/ifcfg-xxx </span></span> 
+</pre></div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></div>
+</div>
+<div><font color="#222222">Make sure following options are present.</font></div>
+<div>
+<pre style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(220, 220, 220);">
+<samp> <span style="font-family: 'Helvetica Neue'; font-size: 14px;">BOOTPROTO=dhcp
+  ONBOOT=yes  </span></samp>
+</pre></div>
+<div><span style="color: rgb(17, 17, 17);">To restart network use ifconfig &lt;inf&gt; up | down or below </span><font color="#111111">command. </font></div>
+<div>
+<div>
+<div>
+<div>
+<p style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></p>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+ /<span style="font-family: 'Helvetica Neue';"><span style="color: rgb(34, 34, 34);">etc/init.d/network restart </span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<p style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></p>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+ s<span style="font-family: 'Helvetica Neue';"><span style="color: rgb(34, 34, 34);">ervice network restart </span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div><span style="color: rgb(34, 34, 34);">To manually get DHCP </span></div>
+<div>
+<div>
+<div>
+<p style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></p>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+ d<span style="font-family: 'Helvetica Neue';"><span style="color: rgb(34, 34, 34);">hclient -v &lt;inf&gt;  </span></span>
+</pre></div>
+</div>
+</div>
+<div><b><span style="color: rgb(34, 34, 34); font-style: inherit; font-variant: inherit;">Managing </span><span style="color: rgb(34, 34, 34); font-style: inherit; font-variant: inherit;">Disks </span></b></div>
+<div><span style="color: rgb(34, 34, 34);"><br/></span></div>
+<div><span style="color: rgb(34, 34, 34);">To detect devices and mounting shared partitions use dmesg </span></div>
+</div>
+</div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div><font color="#222222">Mount virtual box partition</font></div>
+</div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"></div>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+<code style="margin: 0px; padding: 0px; border: 0px; background-color: rgb(238, 238, 238); white-space: inherit;"> <span style="font-family: 'Helvetica Neue'; font-size: 14px;">m<font color="#222222">ount -t vboxsf drive /drive  </font></span></code> 
+</pre>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div>Managing Repositories &lt;a href=&quot;http://www.rackspace.com/knowledge</em>center/article/install-epel-and-additional-repositories-on-centos-and-red-hat&quot;&gt;...</a></div>
+<div><br/></div>
+<div><b><span style="color: rgb(34, 34, 34);">yum</span></b></div>
+<div><span style="color: rgb(34, 34, 34);"><br/></span></div>
+<div><span style="color: rgb(34, 34, 34);">Adding a repo is simply copying file to yum.repos.d/</span></div>
+<div><span style="color: rgb(34, 34, 34);"><br/></span></div>
+<div><span style="color: rgb(34, 34, 34);"><span style="color: rgb(51, 51, 51); font-family: 'Courier New', Courier, monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none; background-color: rgb(255, 255, 255);">wget <a href="http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo">http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo</a> -O /etc/yum.repos.d/epel-apache-maven.repo</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: 'Courier New', Courier, monospace;"><span style="color: rgb(51, 51, 51);"><br/></span></span></span></div>
+<div><span style="color: rgb(51, 51, 51);">Install from disabled repo</span></div>
+<div><span style="color: rgb(51, 51, 51);"><br/></span></div>
+<div>
+<div style="padding: 10px 10px 10px 18px; border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(40, 159, 244); font-family: 'Courier 10 Pitch', Courier, monospace; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 300; font-stretch: inherit; vertical-align: baseline; overflow-x: auto; overflow-y: hidden; color: rgb(255, 255, 255); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(5, 30, 48);">yum --enablerepo=rpmforge install aria2<br/></div>
+</div>
+<div><span style="color: rgb(51, 51, 51);"><br/></span></div>
+<div><span style="color: rgb(51, 51, 51);">Enabling a repo</span></div>
+<div><span style="font-size: 12px;"><span style="font-family: 'Courier New', Courier, monospace;"><span style="color: rgb(51, 51, 51);"><br/></span></span></span></div>
+<div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="font-size: 12px;"><span style="font-family: 'Courier New', Courier, monospace;"><span style="color: rgb(51, 51, 51);"><span style="font-family: 'Helvetica Neue';">yum repolist</span></span></span></span></div>
+</div>
+</div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="font-family: 'Helvetica Neue'; font-size: 14px;">vim /etc/yum.repos.d/rhelxx # enabled = 1</span></div>
+</div>
+</div>
+</div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div><b><span style="color: rgb(34, 34, 34);">Alt. </span></b> <span style="color: rgb(255, 255, 255); font-family: monospace; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: nowrap; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none; background-color: rgb(0, 153, 204);">sudo yum-config-manager --disable rpmforge</span></div>
+<div><b><span style="color: rgb(34, 34, 34);"><br/></span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);">Enable Firewall <a href="http://www.certdepot.net/rhel7-get-started-firewalld/">...</a></span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);"><br/></span></b></div>
+<div><span style="color: rgb(34, 34, 34);">firewall-cmd is utility that writes into iptables</span></div>
+<div><b><span style="color: rgb(34, 34, 34);"><br/></span></b></div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><b><span style="font-family: 'Helvetica Neue';">firewall-cmd —reload</span></b></div>
+</div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><b><span style="color: rgb(51, 51, 51);">firewall-cmd --zone=public --add-port=80/tcp —permanent</span></b></div>
+</div>
+</div>
+<div>
+<div style="box-sizing: inherit; border: 0px; font-style: normal; font-weight: 300; outline: 0px; padding: 0px; vertical-align: baseline; font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<div><b><span style="color: rgb(34, 34, 34);"><b>To stop firewalld, run the following command as root:</b></span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);"><b><br/></b></span></b></div>
+</div>
+<div style="box-sizing: inherit; border: 0px; font-style: normal; font-weight: 300; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<div><b><span style="font-size: 14px;"><code style="box-sizing: inherit; border: 0px; font-style: inherit; font-weight: inherit; outline: 0px; padding: 5px; vertical-align: baseline; color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial;"><span style="font-family: 'Helvetica Neue';">systemctl stop|disable|start firewalld</span></code></span></b></div>
+</div>
+</div>
+<div><b><span style="color: rgb(34, 34, 34);"><br/></span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);">Iptables</span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);"><br/></span></b></div>
+<div><b><span style="color: rgb(34, 34, 34);"><a href="http://wiki.centos.org/HowTos/Network/IPTables">http://wiki.centos.org/HowTos/Network/IPTables</a><br/></span></b></div>
+<div><br/></div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div><b>References :-</b></div>
+<div><b><br/></b></div>
+<div><b><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/part-Basic_System_Configuration.html">Redhat official guide</a></b></div>
+<div><b><a href="https://www.turnkeylinux.org/blog/extending-lvm">How LVM Works</a></b></div>
+<div><b><a href="https://ma.ttias.be/increase-a-vmware-disk-size-vmdk-formatted-as-linux-lvm-without-rebooting/">Use disk to create new partition </a></b></div>
+<div><b><a href="http://www.techrepublic.com/blog/smb-technologist/extending-partitions-on-linux-vmware-virtual-machines/">Extending partitions on Linux VMware virtual machines</a></b></div>
+<div><b><a href="http://wiki.centos.org/HowTos/Network/SecuringSSH">http://wiki.centos.org/HowTos/Network/SecuringSSH</a></b></div>
+<div><b><br/></b></div>
+<div><br/></div>
+</en-note></p>
+
+  </div>
+
+  
+</article>
+
+    </div>
+    <div class="wrapper-footer">
+    <div class="container">
+        <footer class="footer">
+            
+
+<a href="http://facebook.com/dhval.mudawal"><i class="svg-icon facebook"></i></a>
+
+<a href="http://github.com/dhval"><i class="svg-icon github"></i></a>
+
+<a href="http://linkedin.com/in/dhvalmudawal"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="http://twitter.com/jekyllrb"><i class="svg-icon twitter"></i></a>
+
+
+        </footer>
+    </div>
+    <p style="text-align:center;">    <small>
+    © I do not claim ownership of this content. Please send me a <a href="/suggestions">message</a>, if this infringes any copyright. 
+    </small> </p>
+</div>
+</body>
+
+</html>

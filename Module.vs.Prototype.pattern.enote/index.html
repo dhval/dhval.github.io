@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Module vs Prototype pattern – Dhval Mudawal – Rants</title>
+    <meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> 
+<meta name="description" content="The module pattern is typically used for namespacing, where you'll have a single instance acting as a store to group related functions and objects. This is a different use case from what prototyping is good for." />
+<meta property="og:description" content="The module pattern is typically used for namespacing, where you'll have a single instance acting as a store to group related functions and objects. This is a different use case from what prototyping is good for." /> 
+<meta name="author" content="Dhval Mudawal" /> 
+<meta property="og:title" content="Module vs Prototype pattern" />
+<meta property="twitter:title" content="Module vs Prototype pattern" /> 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter Bootstrap css -->
+    <link href="/css/font-awesome.min.css">
+    <link href="/dist/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Your css -->
+    <link href="/css/base-war.css" rel="stylesheet">
+    <link href="/css/dhval.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!-- Vendor js -->
+    <script type="text/javascript" charset="utf-8" src="/dist/requirejs/require.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/dist/modernizr/modernizr.js"></script>
+    <!-- Your js -->
+    <script type="text/javascript" charset="utf-8" src="/js/require.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Dhval Mudawal - Rants" href="/feed.xml" />
+</head>
+
+<body>
+        <div class="container">
+        <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img class="img-thumbnail" src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+            <div class="site-info">
+                <h1 class="site-name"><a href="/">Dhval Mudawal</a></h1>
+                <p class="site-description">
+                     Module vs Prototype pattern 
+                     | Updated: August 28, 2015
+                    
+                </p>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+    </div>
+
+    <div id="main" role="main" class="container">
+        <article class="post">
+  <div class="date">
+	 <a href="https://www.evernote.com/shard/s11/sh/446c3aeb-72ed-4b57-a5e8-5ddc055b059b/44b97829286eaf54468438b9ef0858f4/">View on Evernote.com</a> 
+  </div>
+
+  <div class="entry">
+    <p><en-note>
+<div style="margin:0px;padding:0px;border:0px;font-size:100%;clear:both;margin-bottom:1em;">
+<div>Constructor-functions and prototypes are one of the reasonable ways to implement classes and instances. You need to choose a particular scheme or helper method to implement classes in terms of prototypes. ( <a href="http://stackoverflow.com/questions/1595611/how-to-properly-create-a-custom-object-in-javascript">R</a>ead<span style="color: rgb(0, 119, 204);"> ..</span>.)</div>
+</div>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div><span style="font-size: 100%;">The module pattern is typically used for namespacing, where you&#39;ll have a single instance acting as a store to group related functions and objects. This is a different use case from what prototyping is good for.</span></div>
+<div><span style="font-size: 100%;">They&#39;re not really competing with each other; you can quite happily use both together (eg put a constructor-function inside a module and say</span> <code style="margin:0px;border:0px;font-family:Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif;background-color:rgb(238, 238, 238);white-space:pre-wrap;padding:1px 5px;font-size:13px;">new MyNamespace.MyModule.MyClass(arguments)</code><span style="font-size: 100%;">).</span></div>
+</div>
+<div><b>Prototype</b></div>
+<div>
+<pre style="overflow: auto; border-style: none none none solid !important; border-left-width: 1em !important; border-left-color: rgb(108, 148, 199) !important; font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace; font-size: 14px; padding: 10px; color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(245, 245, 245);">
+<span style="color: rgb(102, 102, 170);">function</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(51, 68, 85);">name</span><span style="color: rgb(51, 68, 85);">)</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);">
+    </span><span style="color: rgb(102, 102, 170);">this</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">name </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> name</span><span style="color: rgb(51, 68, 85);">;</span><span style="color: rgb(51, 68, 85);">
+</span><span style="color: rgb(51, 68, 85);">}</span><span style="color: rgb(51, 68, 85);"></p>
+
+<p></span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">prototype </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);">
+    constructor</span><span style="color: rgb(51, 68, 85);">:</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">,</span><span style="color: rgb(51, 68, 85);">
+    greet</span><span style="color: rgb(51, 68, 85);">:</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">function</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">()</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);">
+        </span><span style="color: rgb(102, 102, 170);">return</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">this</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">name </span><span style="color: rgb(51, 68, 85);">+</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(99, 198, 174);">&#39; says hi!&#39;</span><span style="color: rgb(51, 68, 85);">;</span><span style="color: rgb(51, 68, 85);">
+    </span><span style="color: rgb(51, 68, 85);">}</span><span style="color: rgb(51, 68, 85);">
+</span><span style="color: rgb(51, 68, 85);">};</span>
+</pre></div>
+<div><b>Module</b></div>
+<div><br/></div>
+<div style="overflow: auto; padding: 10px; orphans: auto; text-align: start; text-indent: 0px; widows: 1; background-color: rgb(245, 245, 245); border-style: none none none solid !important; border-left-width: 1em !important; border-left-color: rgb(108, 148, 199) !important;">
+<div style="color: rgb(51, 51, 51); font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div><span style="color: rgb(102, 102, 170);">var customer = (function</span> <span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(51, 68, 85);">name</span><span style="color: rgb(51, 68, 85);">)</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span></div>
+</div>
+<div><font color="#6666AA" face="Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace"> var greet = function () { return “hello &quot; + name; };</font></div>
+<div><span style="font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;"><span style="color: rgb(51, 68, 85);"> return {</span></span></div>
+<div><span style="font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;"><span style="color: rgb(51, 68, 85);">     greet: greet<br/></span></span></div>
+<div><span style="font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;"><span style="color: rgb(51, 68, 85);"> }</span></span></div>
+<div><font color="#334455" face="Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace">})(“John&quot;);</font></div>
+</div>
+<div><br/></div>
+<div style="box-sizing: content-box; background-color: rgb(255, 255, 255); text-align: left;">
+<table style="font-weight: inherit; font-style: inherit; font-variant: inherit;">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<div style="word-wrap: break-word;">
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div>
+<h3 style="font-size: 1.5em; text-transform: uppercase; font-weight: normal; color: rgb(51, 51, 51); font-family: 'Century Gothic', Optima, sans-serif; font-style: normal; font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">REVEALING MODULE PATTERN with Prototype</h3>
+<p style="color: rgb(51, 51, 51); font-family: 'Century Gothic', Optima, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Both prototypes and closures can be used within a revealing module. The examples above can both be used inside of a revealing module. For example, if I want to wrap the Customer and VipCustomer classes within a common namespace, I can use the following:</p>
+<div style="overflow: auto; border-style: none none none solid !important; border-left-width: 1em !important; border-left-color: rgb(108, 148, 199) !important; font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace; font-size: 14px; padding: 10px; color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(245, 245, 245);"><span style="color: rgb(102, 102, 170);">var</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Fenton</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(102, 102, 170);">function</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">()</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(102, 102, 170);">function</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(51, 68, 85);">name</span><span style="color: rgb(51, 68, 85);">)</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);"><br/>
+       </span> <span style="color: rgb(102, 102, 170);">this</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">name </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> name</span><span style="color: rgb(51, 68, 85);">;</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(51, 68, 85);">}</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">prototype </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);"><br/>
+        constructor</span><span style="color: rgb(51, 68, 85);">:</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">,</span><span style="color: rgb(51, 68, 85);"><br/>
+        greet</span><span style="color: rgb(51, 68, 85);">:</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">function</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">()</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);"><br/>
+           </span> <span style="color: rgb(102, 102, 170);">return</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">this</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">name </span><span style="color: rgb(51, 68, 85);">+</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(99, 198, 174);">&#39; says hi!&#39;</span><span style="color: rgb(51, 68, 85);">;</span><span style="color: rgb(51, 68, 85);"><br/>
+       </span> <span style="color: rgb(51, 68, 85);">}</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(51, 68, 85);">};</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(102, 102, 170);">function</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(51, 68, 85);">name</span><span style="color: rgb(51, 68, 85);">,</span><span style="color: rgb(51, 68, 85);"> discountPercentage</span><span style="color: rgb(51, 68, 85);">)</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);"><br/>
+       </span> <span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">call</span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(102, 102, 170);">this</span><span style="color: rgb(51, 68, 85);">,</span><span style="color: rgb(51, 68, 85);"> name</span><span style="color: rgb(51, 68, 85);">);</span><span style="color: rgb(51, 68, 85);"><br/>
+       </span> <span style="color: rgb(102, 102, 170);">this</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">discountPercentage </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> discountPercentage</span><span style="color: rgb(51, 68, 85);">;</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(51, 68, 85);">}</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">prototype </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">new</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">();</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">prototype</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(51, 68, 85);">constructor </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);">;</span><span style="color: rgb(51, 68, 85);"><br/>
+   <br/>
+   </span> <span style="color: rgb(102, 102, 170);">return</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(51, 68, 85);">{</span><span style="color: rgb(51, 68, 85);"><br/>
+       </span> <span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">:</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">,</span><span style="color: rgb(51, 68, 85);"><br/>
+       </span> <span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);">:</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);"><br/>
+   </span> <span style="color: rgb(51, 68, 85);">};</span><span style="color: rgb(51, 68, 85);"><br/></span><span style="color: rgb(51, 68, 85);">}());</span><span style="color: rgb(51, 68, 85);"><br/></span><span style="color: rgb(102, 102, 170);">var</span><span style="color: rgb(51, 68, 85);"> steve </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">new</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Fenton</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(108, 148, 199);">Customer</span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(99, 198, 174);">&#39;Steve&#39;</span><span style="color: rgb(51, 68, 85);">);</span><span style="color: rgb(51, 68, 85);"><br/></span><span style="color: rgb(102, 102, 170);">var</span><span style="color: rgb(51, 68, 85);"> todd </span><span style="color: rgb(51, 68, 85);">=</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(102, 102, 170);">new</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(108, 148, 199);">Fenton</span><span style="color: rgb(51, 68, 85);">.</span><span style="color: rgb(108, 148, 199);">VipCustomer</span><span style="color: rgb(51, 68, 85);">(</span><span style="color: rgb(99, 198, 174);">&#39;Todd&#39;</span><span style="color: rgb(51, 68, 85);">,</span><span style="color: rgb(51, 68, 85);"> </span><span style="color: rgb(255, 136, 51);">10</span><span style="color: rgb(51, 68, 85);">);</span></div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="box-sizing: content-box; background-color: rgb(255, 255, 255); text-align: left;">
+<div><br/></div>
+<div><span style="font-size: 100%;">Finally I do not agree with people suggesting to never use ‘new’ keyword.</span> Language designers provided it for a reason, avoid valid language constructs for short term goals lead to unmaintainable and hard to read code. Yet I would have some reservations about capitalizing and using new to initialize modules, I would prefer jQuery.something than (new jQuery).something</div>
+<div><br/></div>
+<div><a href="http://ericleads.com/2012/09/stop-using-constructor-functions-in-javascript/">http://ericleads.com/2012/09/stop-using-constructor-functions-in-javascript/</a></div>
+<div><br/></div>
+</div>
+<div>Resources :</div>
+<div><br/></div>
+<div><a href="http://stackoverflow.com/questions/7015693/how-to-set-the-prototype-of-a-javascript-object-that-has-already-been-instantiat">http://stackoverflow.com/questions/7015693/how-to-set-the-prototype-of-a-javascript-object-that-has-already-been-instantiat</a></div>
+<div><a href="http://stackoverflow.com/questions/3790909/javascript-module-pattern-vs-constructor-prototype-pattern">http://stackoverflow.com/questions/3790909/javascript-module-pattern-vs-constructor-prototype-pattern</a></div>
+<div><a href="https://www.stevefenton.co.uk/2013/12/javascript-prototype-vs-revealing-module-pattern/">https://www.stevefenton.co.uk/2013/12/javascript-prototype-vs-revealing-module-pattern/</a></div>
+<div><a href="http://tobyho.com/2010/11/22/javascript-constructors-and/">http://tobyho.com/2010/11/22/javascript-constructors-and/</a></div>
+<div><br/></div>
+<div><a href="http://stackoverflow.com/questions/7015693/how-to-set-the-prototype-of-a-javascript-object-that-has-already-been-instantiat">http://stackoverflow.com/questions/7015693/how-to-set-the-prototype-of-a-javascript-object-that-has-already-been-instantiat</a></div>
+</en-note></p>
+
+  </div>
+
+  
+</article>
+
+    </div>
+    <div class="wrapper-footer">
+    <div class="container">
+        <footer class="footer">
+            
+
+<a href="http://facebook.com/dhval.mudawal"><i class="svg-icon facebook"></i></a>
+
+<a href="http://github.com/dhval"><i class="svg-icon github"></i></a>
+
+<a href="http://linkedin.com/in/dhvalmudawal"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="http://twitter.com/jekyllrb"><i class="svg-icon twitter"></i></a>
+
+
+        </footer>
+    </div>
+    <p style="text-align:center;">    <small>
+    © I do not claim ownership of this content. Please send me a <a href="/suggestions">message</a>, if this infringes any copyright. 
+    </small> </p>
+</div>
+</body>
+
+</html>

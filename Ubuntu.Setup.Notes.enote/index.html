@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ubuntu Setup Notes – Dhval Mudawal – Rants</title>
+    <meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> 
+<meta name="description" content="My quick note on setting up my personnel Ubuntu Server nodes. I update this as I ran up with issues setting up any components." />
+<meta property="og:description" content="My quick note on setting up my personnel Ubuntu Server nodes. I update this as I ran up with issues setting up any components." /> 
+<meta name="author" content="Dhval Mudawal" /> 
+<meta property="og:title" content="Ubuntu Setup Notes" />
+<meta property="twitter:title" content="Ubuntu Setup Notes" /> 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter Bootstrap css -->
+    <link href="/css/font-awesome.min.css">
+    <link href="/dist/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Your css -->
+    <link href="/css/base-war.css" rel="stylesheet">
+    <link href="/css/dhval.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!-- Vendor js -->
+    <script type="text/javascript" charset="utf-8" src="/dist/requirejs/require.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/dist/modernizr/modernizr.js"></script>
+    <!-- Your js -->
+    <script type="text/javascript" charset="utf-8" src="/js/require.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Dhval Mudawal - Rants" href="/feed.xml" />
+</head>
+
+<body>
+        <div class="container">
+        <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img class="img-thumbnail" src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+            <div class="site-info">
+                <h1 class="site-name"><a href="/">Dhval Mudawal</a></h1>
+                <p class="site-description">
+                     Ubuntu Setup Notes 
+                     | Updated: September 08, 2015
+                    
+                </p>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+    </div>
+
+    <div id="main" role="main" class="container">
+        <article class="post">
+  <div class="date">
+	 <a href="https://www.evernote.com/shard/s11/sh/ca6dcafb-6cb8-49b3-9e3e-5823cbc2ccaf/e6353b87392d5d6398baaad87dee3f48/">View on Evernote.com</a> 
+  </div>
+
+  <div class="entry">
+    <p><en-note>
+<div>My quick note on setting up my personnel Ubuntu Server nodes. I update this as I ran up with issues setting up any components.</div>
+<div><b><br/></b></div>
+<div><b>MySQL</b></div>
+<div><br/></div>
+<div>Install packages</div>
+<div>
+<div><br/></div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="color: rgb(51, 51, 51);"><span style="font-size: 100%;">sudo apt-get install mysql-server</span> <span style="font-size: 100%;">mysql-client</span> <span style="font-size: 100%;">libmysql-java tomcat7</span></span></div>
+</div>
+</div>
+<div>
+<div style="margin: 0px 0px 15px; border-width: 0px; outline: 0px; vertical-align: baseline;">
+<div>Access mysql console</div>
+</div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="color: rgb(51, 51, 51);"><span style="font-size: 100%;">mysql -u root password root</span></span></div>
+</div>
+</div>
+<div style="margin: 0px 0px 15px; border-width: 0px; outline: 0px; vertical-align: baseline;">
+<div>Granting privileges to users</div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><span style="color: rgb(51, 51, 51);"><span style="font-size: 100%;">grant all privileges on [database].* to [user]@localhost identified by &quot;[password]&quot;;</span> <span style="font-size: 100%;">flush privileges;</span></span></div>
+</div>
+</div>
+<div>This is how I create my &quot;Super User&quot; privileges (although I would normally specify a host).</div>
+<div>
+<div>
+<pre style="padding: 5px; border: 0px; font-size: 13px; overflow: auto; max-height: 600px; word-wrap: normal; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(238, 238, 238);">
+<code style="padding: 0px; border: 0px; font-size: 13px; white-space: inherit; background-color: rgb(238, 238, 238);"><span style="padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">GRANT</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">ALL</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> PRIVILEGES </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">ON</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> mydb</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;">.<em></span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">TO</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(128, 0, 0); padding: 0px; border: 0px; font-size: 13px;">&#39;myuser&#39;</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;">@</span><span style="font-family: 'Helvetica Neue'; color: rgb(128, 0, 0); padding: 0px; border: 0px; font-size: 13px;">&#39;%&#39;</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">WITH</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">GRANT</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;"> </span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 139); padding: 0px; border: 0px; font-size: 13px;">OPTION</span><span style="font-family: 'Helvetica Neue'; color: rgb(0, 0, 0); padding: 0px; border: 0px; font-size: 13px;">;</span><span style="font-family: 'Helvetica Neue'; padding: 0px; border: 0px; font-size: 13px;"><font color="#393318">  </font></span></code>
+</pre></div>
+</div>
+<div><b>nginx</b></div>
+<div>
+<div><br/></div>
+<div>Install packages</div>
+<div>
+<div><br/></div>
+</div>
+</div>
+<div style="margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><font color="#666600">s</font><span style="color: rgb(0, 0, 0);">ervice nginx start | stop | restart</span></div>
+</div>
+</div>
+<div>Setting as <a href="http://www.cyberciti.biz/tips/using-nginx-as-reverse-proxy.html">reverse proxy</a></div>
+<div><br/></div>
+<div>
+<div><font color="#EF4135" size="2"><span style="white-space: pre-wrap;">location /sc2/ {</span></font></div>
+<div>
+<div style="color: rgb(239, 65, 53); font-size: 12px; white-space: pre-wrap;">  proxy<em>pass <a href="http://bog.no-ip.biz/sc2/">http://bog.no-ip.biz/sc2/</a>;</div>
+<div style="color: rgb(239, 65, 53); font-size: 12px; white-space: pre-wrap;">  proxy</em>http<em>version 1.1;</div>
+<div style="color: rgb(239, 65, 53); font-size: 12px; white-space: pre-wrap;">  proxy</em>set<em>header Upgrade $http</em>upgrade;</div>
+<div style="color: rgb(239, 65, 53); font-size: 12px; white-space: pre-wrap;">  proxy<em>set</em>header Connection &quot;upgrade&quot;;</div>
+<div style="color: rgb(239, 65, 53); font-size: 12px; white-space: pre-wrap;">  proxy<em>set</em>header Host $host;</div>
+</div>
+</div>
+<div style="white-space: pre-wrap;">
+<div><span style="color: rgb(239, 65, 53);"><span style="font-size: 12px;">}</span></span></div>
+</div>
+<div><a href="http://blog.ejci.net/2013/05/25/node-js-development-stack-on-amazon-ec2/">http://blog.ejci.net/2013/05/25/node-js-development-stack-on-amazon-ec2/</a></div>
+<div><br/></div>
+<div>Config directory     -     <span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; color: rgb(235, 235, 235); background-color: rgb(2, 2, 2);">/etc/nginx</span></div>
+<div>Static resources     -    <span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; color: rgb(235, 235, 235); background-color: rgb(2, 2, 2);">/usr/share/nginx/html</span></div>
+<div><br/></div>
+<div><b>Tomcat</b></div>
+<div><br/></div>
+<div>Directories &amp; Files     -</div>
+<div><span style="color: rgb(235, 235, 235);"><span style="font-size: 12px;">    </span></span> <span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; color: rgb(235, 235, 235); background-color: rgb(2, 2, 2);">/var/lib/tomcat7/webapps</span></div>
+<div><span style="font-size: 13px;"><span style="color: rgb(34, 34, 34);"><code style="padding: 0px; border: 0px; font-size: 13px; white-space: inherit; background-color: rgb(238, 238, 238);"><span style="font-family: 'Helvetica Neue';">     /usr/share/tomcat7/llib</span></code></span></span></div>
+<div><span style="font-size: 13px;"><span style="color: rgb(34, 34, 34);"><code style="padding: 0px; border: 0px; font-size: 13px; white-space: inherit; background-color: rgb(238, 238, 238);"><span style="font-family: 'Helvetica Neue';">     /var/log/tomcat7/catalina.out</span></code></span></span></div>
+<div><br/></div>
+<div><a href="http://www.unixmen.com/install-apache-ant-maven-tomcat-centos-76-5/">http://www.unixmen.com/install-apache-ant-maven-tomcat-centos-76-5/</a></div>
+<div><b><br/></b></div>
+<div><b>Rabbit MQ</b></div>
+<table style="font-size:100%;font-weight:inherit;font-style:inherit;font-variant:inherit;width:871px;">
+<tr style="font-size:100%;">
+<td style="vertical-align: top;width:99.54075774971297%;">
+<div style="word-wrap: break-word;">
+<p style="font-size: 100%; margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;"><span style="color: rgb(34, 34, 34);"><b>I</b>nstall -</span></p>
+<pre style="font-size: 13px; margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+<code style="margin: 0px; padding: 0px; border: 0px; font-size: 13px; background-color: rgb(238, 238, 238); white-space: inherit;"><span style="font-family: 'Helvetica Neue';">e<font color="#222222">cho &quot;deb http://www.rabbitmq.com/debian/ testing main&quot;  | sudo tee  /etc/apt/sources.list.d/rabbitmq.list &gt; /dev/null
+sudo wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
+sudo apt-key add rabbitmq-signing-key-public.asc
+sudo apt-get update
+sudo apt-get install rabbitmq-server -y
+sudo service rabbitmq-server start
+sudo rabbitmq-plugins enable rabbitmq<em>management
+sudo service rabbitmq-server restart
+</font></span></code><span style="font-family: 'Helvetica Neue';">
+</span>
+</pre>
+<div style="margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div><font color="#222222"><span style="font-size: 100%;">Default username / password will be guest / guest and port will be 15672. Use </span><span style="font-size: 15px;">rabbitmqctl to c</span></font><span style="font-size: 100%; color: rgb(34, 34, 34);">hange the username and password or add new user.</span></div>
+</div>
+<pre style="margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+<code style="margin: 0px; padding: 0px; border: 0px; background-color: rgb(238, 238, 238);"><span style="font-family: 'Helvetica Neue';"><span style="white-space: inherit;">s</span><font color="#222222"><span style="white-space: inherit;">udo rabbitmqctl add</em>user user<em>name password</em>for<em>this</em>user
+sudo rabbitmqctl set<em>user</em>tags user<em>name administrator
+sudo rabbitmqctl set</em>permissions -p / user_name &quot;.</em>&quot; &quot;.<em>&quot; &quot;.</em></span>”<span style="white-space: inherit;"> </span></font></span></code><span style="font-family: 'Helvetica Neue';">
+</span>
+</pre>
+<div style="font-size: 100%; margin: 0px 0px 1em; padding: 0px; border: 0px; clear: both;">
+<div><span style="color: rgb(34, 34, 34);">Delete guest user </span></div>
+</div>
+<pre style="font-size: 13px; margin: 0px 0px 1em; padding: 5px; border: 0px; overflow: auto; width: auto; max-height: 600px; background-color: rgb(238, 238, 238); word-wrap: normal;">
+<code style="margin: 0px; padding: 0px; border: 0px; font-size: 13px; background-color: rgb(238, 238, 238); white-space: inherit;"><span style="font-family: 'Helvetica Neue';">s<font color="#222222">udo rabbitmqctl delete<em>user guest</font></span></code><span style="font-family: 'Helvetica Neue';">
+</span>
+</pre></div>
+</td>
+</tr>
+</table>
+<div>Resources </div>
+<div>
+<div><br/></div>
+<div><a href="https://prezi.com/qdsro8dxqnol/comparing-rabbitmq-activemq/">https://prezi.com/qdsro8dxqnol/comparing-rabbitmq-activemq/</a></div>
+</div>
+<div><a href="http://www.ekito.fr/people/mqtt-benchmarks-rabbitmq-activemq/">http://www.ekito.fr/people/mqtt-benchmarks-rabbitmq-activemq/</a></div>
+<div><a href="http://stackoverflow.com/questions/8808909/simple-way-to-install-rabbitmq-in-ubuntu">http://stackoverflow.com/questions/8808909/simple-way-to-install-rabbitmq-in-ubuntu</a></div>
+<div><b><br/></b></div>
+<div><b>Plex</b></div>
+<div><br/></div>
+<div>Download and install - <a href="https://plex.tv/downloads">https://plex.tv/downloads</a></div>
+<div>
+<div><br/></div>
+<div><code style="box-sizing: border-box; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; font-size: 16px; border: 1px solid rgb(228, 228, 228); padding: 2px 5px; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; color: rgb(72, 72, 72); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial;"><span style="font-family: 'Helvetica Neue';">sudo dpkg -i plexmediaserver</em>0.9.8.18.290-11b7fdd<em>amd64.deb</span></code><span style="color: rgb(72, 72, 72); font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none;"> </span></div>
+</div>
+<div><br/></div>
+<div><br/></div>
+<div>
+<div>URL&#39;s</div>
+<div><br/></div>
+<div><a href="https://192-168-1-136.5bc053493c634169b1a83425515c873f.plex.direct:32400/video/:/transcode/universal/start?path=http%3A%2F%2F127.0.0.1%3A32400%2Flibrary%2Fmetadata%2F864&amp;mediaIndex=0&amp;partIndex=0&amp;protocol=http&amp;offset=0&amp;fastSeek=1&amp;directPlay=0&amp;directStream=1&amp;subtitleSize=100&amp;audioBoost=100&amp;session=03wch4a0j4lk57b9&amp;subtitles=burn&amp;copyts=1&amp;Accept-Language=en&amp;X-Plex-Chunked=1&amp;X-Plex-Product=Plex+Web&amp;X-Plex-Version=2.4.16&amp;X-Plex-Client-Identifier=tht20xn5rzk0rudi&amp;X-Plex-Platform=Chrome&amp;X-Plex-Platform-Version=44.0&amp;X-Plex-Device=OSX&amp;X-Plex-Device-Name=Plex+Web+(Chrome)&amp;X-Plex-Username=dhval&amp;X-Plex-Token=RmhrpmociZKsCY2bc4ZW">https://192-168-1-136.5bc053493c634169b1a83425515c873f.plex.direct:32400/video/:/transcode/universal/start?path=http%3A%2F%2F127.0.0.1%3A32400%2Flibrary%2Fmetadata%2F864&amp;mediaIndex=0&amp;partIndex=0&amp;protocol=http&amp;offset=0&amp;fastSeek=1&amp;directPlay=0&amp;directStream=1&amp;subtitleSize=100&amp;audioBoost=100&amp;session=03wch4a0j4lk57b9&amp;subtitles=burn&amp;copyts=1&amp;Accept-Language=en&amp;X-Plex-Chunked=1&amp;X-Plex-Product=Plex+Web&amp;X-Plex-Version=2.4.16&amp;X-Plex-Client-Identifier=tht20xn5rzk0rudi&amp;X-Plex-Platform=Chrome&amp;X-Plex-Platform-Version=44.0&amp;X-Plex-Device=OSX&amp;X-Plex-Device-Name=Plex+Web+(Chrome)&amp;X-Plex-Username=dhval&amp;X-Plex-Token=RmhrpmociZKsCY2bc4ZW</a></div>
+<div><br/></div>
+<div>http://madhu.noip.me:32400/library/parts/983/file.mp4?X-Plex-Token=<a href="https://192-168-1-136.5bc053493c634169b1a83425515c873f.plex.direct:32400/video/:/transcode/universal/start?path=http%3A%2F%2F127.0.0.1%3A32400%2Flibrary%2Fmetadata%2F864&amp;mediaIndex=0&amp;partIndex=0&amp;protocol=http&amp;offset=0&amp;fastSeek=1&amp;directPlay=0&amp;directStream=1&amp;subtitleSize=100&amp;audioBoost=100&amp;session=03wch4a0j4lk57b9&amp;subtitles=burn&amp;copyts=1&amp;Accept-Language=en&amp;X-Plex-Chunked=1&amp;X-Plex-Product=Plex+Web&amp;X-Plex-Version=2.4.16&amp;X-Plex-Client-Identifier=tht20xn5rzk0rudi&amp;X-Plex-Platform=Chrome&amp;X-Plex-Platform-Version=44.0&amp;X-Plex-Device=OSX&amp;X-Plex-Device-Name=Plex+Web+(Chrome)&amp;X-Plex-Username=dhval&amp;X-Plex-Token=RmhrpmociZKsCY2bc4ZW">RmhrpmociZKsCY2bc4ZW</a></div>
+<div><br/></div>
+<div>http://192.168.0.112:32400/library/sections/2/all</div>
+<div><br/></div>
+<div>https://my.plexapp.com/pms/system/library/sections?X-Plex-Token=L8unPjK1n3Rpy55Fm4mA</div>
+<div><br/></div>
+<div>old---</div>
+<div>http://madhu.noip.me:32400/library/parts/2329/file.mp4?X-Plex-Token=ynxnRy9Ked6h6yeLeBJY</div>
+</div>
+<div><br/></div>
+<div>LuksOpen</div>
+<div><br/></div>
+<div><span style="font: 12.0px Monaco; font-variant-ligatures: no-common-ligatures; color: #e2e2e2; background-color: #5e5e5e"> sudo cryptsetup luksOpen /media/downloads/backup  vol</span></div>
+<div><span style="font: 12.0px Monaco; font-variant-ligatures: no-common-ligatures; color: #e2e2e2; background-color: #5e5e5e"> sudo mount /dev/mapper/vol /data</span></div>
+<div><b><br/></b></div>
+<div><b>Backup config files using ETC Keeper</b></div>
+<div><b><br/></b></div>
+<div>git@github.com:dhval/etc-keeper.git</div>
+<div><b><br/></b></div>
+<div><a href="http://askubuntu.com/questions/9135/how-to-backup-settings-and-list-of-installed-packages">http://askubuntu.com/questions/9135/how-to-backup-settings-and-list-of-installed-packages</a></div>
+<div><a href="http://duncanlock.net/blog/2013/08/27/comprehensive-linux-backups-with-etckeeper-backupninja/">http://duncanlock.net/blog/2013/08/27/comprehensive-linux-backups-with-etckeeper-backupninja/</a></div>
+<div><a href="https://help.ubuntu.com/lts/serverguide/etckeeper.html">https://help.ubuntu.com/lts/serverguide/etckeeper.html</a></div>
+<div><a href="https://coderwall.com/p/v1agsg/installing-etckeeper-to-store-config-with-autopush-to-git-in-ubuntu-14-04-lts">https://coderwall.com/p/v1agsg/installing-etckeeper-to-store-config-with-autopush-to-git-in-ubuntu-14-04-lts</a></div>
+<div><b><br/></b></div>
+<div><b>Dropbox</b></div>
+<div><b><br/></b></div>
+<div><a href="http://www.dropboxwiki.com/tips-and-tricks/install-dropbox-centos-gui-required">http://www.dropboxwiki.com/tips-and-tricks/install-dropbox-centos-gui-required</a></div>
+<div><b><br/></b></div>
+<div><b>SQL Scripts</b></div>
+<div><br/></div>
+<div>$ mysql -u root -p</div>
+<div><br/></div>
+<div>mysql&gt; <span style="color: rgb(51, 51, 51);"><span style="font-size: 100%;">create database emotherearth;</span></span></div>
+<div>mysql&gt; use mydatabase;</div>
+<div>mysql&gt; show tables;</div>
+<div><br/></div>
+<div>
+<div>create user &#39;dbo@localhost&#39; IDENTIFIED BY ’secret&#39;</div>
+<div><br/></div>
+<div>CREATE TABLE motherearth.users (</div>
+<div>  id INTEGER PRIMARY KEY AUTO</em>INCREMENT,</div>
+<div>  name VARCHAR(120),</div>
+<div>  login VARCHAR(75) NOT NULL,</div>
+<div>  password VARCHAR(75) NOT NULL</div>
+<div> );</div>
+<div><br/></div>
+<div><br/></div>
+<div>insert into users (name,login,password) VALUES (&quot;dhval&quot;, &quot;admin&quot;, &quot;hello&quot;);</div>
+</div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+</en-note></p>
+
+  </div>
+
+  
+</article>
+
+    </div>
+    <div class="wrapper-footer">
+    <div class="container">
+        <footer class="footer">
+            
+
+<a href="http://facebook.com/dhval.mudawal"><i class="svg-icon facebook"></i></a>
+
+<a href="http://github.com/dhval"><i class="svg-icon github"></i></a>
+
+<a href="http://linkedin.com/in/dhvalmudawal"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="http://twitter.com/jekyllrb"><i class="svg-icon twitter"></i></a>
+
+
+        </footer>
+    </div>
+    <p style="text-align:center;">    <small>
+    © I do not claim ownership of this content. Please send me a <a href="/suggestions">message</a>, if this infringes any copyright. 
+    </small> </p>
+</div>
+</body>
+
+</html>

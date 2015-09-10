@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Big-Oh Notation – Dhval Mudawal – Rants</title>
+    <meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> 
+<meta name="description" content="Benchmarks vs Big-oh notation isn't always useful" />
+<meta property="og:description" content="Benchmarks vs Big-oh notation isn't always useful" /> 
+<meta name="author" content="Dhval Mudawal" /> 
+<meta property="og:title" content="Big-Oh Notation" />
+<meta property="twitter:title" content="Big-Oh Notation" /> 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter Bootstrap css -->
+    <link href="/css/font-awesome.min.css">
+    <link href="/dist/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Your css -->
+    <link href="/css/base-war.css" rel="stylesheet">
+    <link href="/css/dhval.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!-- Vendor js -->
+    <script type="text/javascript" charset="utf-8" src="/dist/requirejs/require.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/dist/modernizr/modernizr.js"></script>
+    <!-- Your js -->
+    <script type="text/javascript" charset="utf-8" src="/js/require.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Dhval Mudawal - Rants" href="/feed.xml" />
+</head>
+
+<body>
+        <div class="container">
+        <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img class="img-thumbnail" src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+            <div class="site-info">
+                <h1 class="site-name"><a href="/">Dhval Mudawal</a></h1>
+                <p class="site-description">
+                     Big-Oh Notation 
+                     | Updated: September 10, 2015
+                    
+                </p>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+    </div>
+
+    <div id="main" role="main" class="container">
+        <article class="post">
+  <div class="date">
+	 <a href="https://www.evernote.com/shard/s11/sh/137f92de-c11d-4be1-8355-ac2994e30360/500e8bba9537e3dde4d378b22e655413/">View on Evernote.com</a> 
+  </div>
+
+  <div class="entry">
+    <p><en-note bgcolor="#FFFFFF">
+<div>
+<div><span style="font-family: serif;"><b>Definition</b>: For a sufficiently large n, it provides upper bound on order of growth.</span></div>
+<div><br/></div>
+</div>
+<ul>
+<li>Determine order of growth as input size increases.</li>
+<li><span style="clear: none; display: inline; margin-bottom: 0px; unicode-bidi: normal;">We only care about the most significant portion (dominant term) of complexity.</span></li>
+</ul>
+<div style="font-weight: bold;"><br/></div>
+<div><b>Benchmarks vs Big-oh notation isn&#39;t always useful</b></div>
+<div><br/></div>
+<div>Complexity analysis can be very useful, but there are problems with it too. However benchmarks take into account various practical underlining factors. eg, the effect on paging as virtual memory usage grows, actual data structure implementation</div>
+<div><br/></div>
+<ul>
+<li><strong>Hard to analyze</strong>. </li>
+<li><strong>Average case unknown</strong>. </li>
+<li><strong>Unknown constant</strong>. Big-oh analysis only tells you how it grows with the size of the problem, not actual time</li>
+<li><strong>Small data sets</strong>. For small n, efficiency may not be important. e.g. sorting on Flash ROM better to do selection sort as it minimizes swaps</li>
+</ul>
+<div><br/></div>
+<div>
+<h2 style="margin: 10px 0px; font-family: inherit; font-weight: bold; color: inherit; text-rendering: optimizelegibility;"><span style="font-size: 14px;">Big-O Complexity Chart</span></h2>
+<span style="color: rgb(51, 51, 51);"><en-media alt="Big O Complexity Graph" hash="d68e91b0d0880bc8098682769e562d79" height="454" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px; cursor: default;" title="Big O Complexity Graph" type="image/png" width="783"></en-media></span>
+<div style="margin: 10px 0px; text-rendering: optimizelegibility;">
+<div><br/></div>
+</div>
+</div>
+<div>Resources -</div>
+<div><br/></div>
+<div><a href="http://stackoverflow.com/questions/487258/plain-english-explanation-of-big-o">http://stackoverflow.com/questions/487258/plain-english-explanation-of-big-o</a></div>
+<div><a href="http://bigocheatsheet.com/">http://bigocheatsheet.com/</a></div>
+</en-note></p>
+
+  </div>
+
+  
+</article>
+
+    </div>
+    <div class="wrapper-footer">
+    <div class="container">
+        <footer class="footer">
+            
+
+<a href="http://facebook.com/dhval.mudawal"><i class="svg-icon facebook"></i></a>
+
+<a href="http://github.com/dhval"><i class="svg-icon github"></i></a>
+
+<a href="http://linkedin.com/in/dhvalmudawal"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="http://twitter.com/jekyllrb"><i class="svg-icon twitter"></i></a>
+
+
+        </footer>
+    </div>
+    <p style="text-align:center;">    <small>
+    © I do not claim ownership of this content. Please send me a <a href="/suggestions">message</a>, if this infringes any copyright. 
+    </small> </p>
+</div>
+</body>
+
+</html>

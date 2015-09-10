@@ -1,18 +1,22 @@
 Search request: tag:"blog" 
-Total found: 16
-  1 : 64cc18fb-dfb0-4154-986f-30bddf3976f7 : 25 Apr, 2014 : new keyword in JavaScript - Stack Overflow 
-  2 : aa97852a-e48c-4ee9-81da-9a26269c5c8e : 08 Oct, 2012 : TCP-IP QA 
-  3 : 9aacaeea-b895-425e-89d7-1d7d468a7ad4 : 06 Jun, 2014 : for-each over an array in JavaScript 
-  4 : bd08672f-d404-4ded-bc7e-6c2d91d367e9 : 23 Aug, 2012 : Network classes 
-  5 : 2784d125-d420-4753-b144-a4b38f36e95a : 18 May, 2015 : weblogic.Deployer - usage 
-  6 : 2c6a34de-2035-4bb3-ab54-d6f6b5795f0b : 10 May, 2014 : ufw - usage 
-  7 : 88d0a885-1af1-4322-b666-1ceba3ffa3d4 : 22 Jul, 2014 : tcpdump - usage 
-  8 : 12025ab9-5fb1-428f-891d-b2744357443c : 12 Jul, 2014 : pf, ipfw - usage 
-  9 : c611615b-fbc6-4baa-aed7-24b816c53a55 : 24 Oct, 2014 : iptables - usage 
- 10 : 05a38957-cb23-44a1-905b-e3f170fce877 : 07 Nov, 2013 : WebLogic Server 12c - Maven Usage Notes 
- 11 : c27db6b0-c22d-4971-8f5e-12f3a0cf5b97 : 15 Nov, 2011 : Unicode - Character Encoding 
- 12 : a17e5808-5325-4edb-9959-cf2058fc0a38 : 17 Nov, 2009 : Sorting Algorithms 
- 13 : fc27b983-1c3e-411f-b3d2-3fc8bd9df9ff : 26 Jun, 2012 : Endianness - Byte Order Marker 
- 14 : 404881d8-7614-4206-9691-b3bca72e364c : 21 Aug, 2015 : Understanding IPv6 
- 15 : b5ef7d77-42ed-4387-b7c7-22386081f8b8 : 17 Aug, 2015 : Dot & Cross product of vectors 
- 16 : 989e5faf-9277-494a-81a2-7a1129747457 : 10 Oct, 2014 : iptables - concepts 
+Total found: 20
+  1 : 02809007-e08d-42c6-95f8-453618f97e02 : 09 Jun, 2015 : Big-O Cheat Sheet 
+  2 : 137f92de-c11d-4be1-8355-ac2994e30360 : 17 Nov, 2009 : Big-Oh Notation 
+  3 : ca6dcafb-6cb8-49b3-9e3e-5823cbc2ccaf : 06 Feb, 2015 : Ubuntu Setup Notes 
+  4 : 48efc0bc-54d2-4153-9206-8e5e15a0297e : 22 May, 2013 : Shell - route 
+  5 : 0e274f01-ebef-4699-b765-893ef9b99768 : 13 Jun, 2015 : CentOS/ Redhat Setup Notes 
+  6 : c611615b-fbc6-4baa-aed7-24b816c53a55 : 24 Oct, 2014 : iptables - usage 
+  7 : 446c3aeb-72ed-4b57-a5e8-5ddc055b059b : 28 Aug, 2015 : Module vs Prototype pattern 
+  8 : 3046eb1a-fe2d-424f-b63d-773eb695842a : 23 Mar, 2014 : Module & reveling module patterns 
+  9 : a17e5808-5325-4edb-9959-cf2058fc0a38 : 17 Nov, 2009 : Sorting Algorithms 
+ 10 : 64cc18fb-dfb0-4154-986f-30bddf3976f7 : 25 Apr, 2014 : new keyword in JavaScript - Stack Overflow 
+ 11 : aa97852a-e48c-4ee9-81da-9a26269c5c8e : 08 Oct, 2012 : TCP-IP QA 
+ 12 : 9aacaeea-b895-425e-89d7-1d7d468a7ad4 : 06 Jun, 2014 : for-each over an array in JavaScript 
+ 13 : bd08672f-d404-4ded-bc7e-6c2d91d367e9 : 23 Aug, 2012 : Network classes 
+ 14 : 2784d125-d420-4753-b144-a4b38f36e95a : 18 May, 2015 : weblogic.Deployer - usage 
+ 15 : 2c6a34de-2035-4bb3-ab54-d6f6b5795f0b : 10 May, 2014 : ufw - usage 
+ 16 : 88d0a885-1af1-4322-b666-1ceba3ffa3d4 : 22 Jul, 2014 : tcpdump - usage 
+ 17 : 12025ab9-5fb1-428f-891d-b2744357443c : 12 Jul, 2014 : pf, ipfw - usage 
+ 18 : 05a38957-cb23-44a1-905b-e3f170fce877 : 07 Nov, 2013 : WebLogic Server 12c - Maven Usage Notes 
+ 19 : c27db6b0-c22d-4971-8f5e-12f3a0cf5b97 : 15 Nov, 2011 : Unicode - Character Encoding 
+ 20 : fc27b983-1c3e-411f-b3d2-3fc8bd9df9ff : 26 Jun, 2012 : Endianness - Byte Order Marker 

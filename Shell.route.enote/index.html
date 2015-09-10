@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shell - route – Dhval Mudawal – Rants</title>
+    <meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> 
+<meta name="description" content="IP command cheat sheet " />
+<meta property="og:description" content="IP command cheat sheet " /> 
+<meta name="author" content="Dhval Mudawal" /> 
+<meta property="og:title" content="Shell - route" />
+<meta property="twitter:title" content="Shell - route" /> 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter Bootstrap css -->
+    <link href="/css/font-awesome.min.css">
+    <link href="/dist/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Your css -->
+    <link href="/css/base-war.css" rel="stylesheet">
+    <link href="/css/dhval.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!-- Vendor js -->
+    <script type="text/javascript" charset="utf-8" src="/dist/requirejs/require.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/dist/modernizr/modernizr.js"></script>
+    <!-- Your js -->
+    <script type="text/javascript" charset="utf-8" src="/js/require.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Dhval Mudawal - Rants" href="/feed.xml" />
+</head>
+
+<body>
+        <div class="container">
+        <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img class="img-thumbnail" src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+            <div class="site-info">
+                <h1 class="site-name"><a href="/">Dhval Mudawal</a></h1>
+                <p class="site-description">
+                     Shell - route 
+                     | Updated: September 01, 2015
+                    
+                </p>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+    </div>
+
+    <div id="main" role="main" class="container">
+        <article class="post">
+  <div class="date">
+	 <a href="https://www.evernote.com/shard/s11/sh/48efc0bc-54d2-4153-9206-8e5e15a0297e/af3d93b6ecb7feaacb2538d68c32343d/">View on Evernote.com</a> 
+  </div>
+
+  <div class="entry">
+    <p><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div>route is a traditional utility now replaced by ‘ip route’ on Linux which belongs to <code style="padding: 1px 5px; border: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; white-space: normal; color: rgb(34, 34, 34); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(238, 238, 238);">iproute2</code>suite. <code style="padding: 1px 5px; border: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; white-space: normal; color: rgb(34, 34, 34); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(238, 238, 238);">/24</code><span style="color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none; background-color: rgb(255, 255, 255);"> syntax is not implemented in all </span><code style="padding: 1px 5px; border: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; white-space: normal; color: rgb(34, 34, 34); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(238, 238, 238);">ifconfig</code><span style="color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none; background-color: rgb(255, 255, 255);"> versions, you may have to use</span> <code style="padding: 1px 5px; border: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; white-space: normal; color: rgb(34, 34, 34); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(238, 238, 238);">netmask 255.255.255.0</code> or<code style="padding: 1px 5px; border: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; white-space: normal; color: rgb(34, 34, 34); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(238, 238, 238);">mask 255.255.255.0</code> syntax.</div>
+<div><br/></div>
+<div><a href="https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf">IP command cheat sheet </a></div>
+<div style="word-wrap: break-word;">
+<div style="word-wrap: break-word; overflow-x: auto !important; overflow-y: hidden !important;">
+<table border="0" cellpadding="0" cellspacing="0" style="word-wrap: break-word; max-width: 100%; border-spacing: 0px; border: 0px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; width: 428px;">
+<tbody style="word-wrap: break-word; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important;">
+<tr style="word-wrap: break-word; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important;">
+<td style="word-wrap: break-word; border-top-width: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 4px; vertical-align: baseline !important; border-left-width: 0px !important; border-right-width: 0px !important; border-bottom-width: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; width: 8.177570093457943%;">
+<div><span style="font-family: 'Andale Mono';"><span style="color: rgb(51, 51, 51);"><br/></span></span></div>
+</td>
+<td style="word-wrap: break-word; border-top-width: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 4px; border-bottom-left-radius: 0px; vertical-align: baseline !important; border-left-width: 0px !important; border-right-width: 0px !important; border-bottom-width: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; width: 92%;">
+<div><br/></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div><span style="color: rgb(51, 51, 51);"><span style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;">Printing the route</span></span></div>
+<div><span style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;"><span style="color: rgb(51, 51, 51);"><br/></span></span></div>
+<div style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif; margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div><code style="word-wrap: break-word; font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important; font-size: 1em !important; color: rgb(255, 20, 147) !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; background-position: initial initial !important; background-repeat: initial initial !important;">netstat -nr</code></div>
+</div>
+</div>
+<div>
+<div><span style="font-family: 'Andale Mono';"><span style="color: rgb(51, 51, 51); border-width: 0px; outline: 0px; vertical-align: baseline;">route add -host 10.12.76.5 netmask 255.255.255.0 dev eth0</span></span></div>
+<div><span style="font-family: 'Andale Mono';"><span style="color: rgb(51, 51, 51);">route del -host 10.12.76.5 netmask 255.255.255.0 dev eth0</span></span></div>
+<div><span style="font-family: 'Andale Mono';"><span style="color: rgb(51, 51, 51);"><span style="background-color: transparent;">route add default gw 192.168.1.1 wlan2</span></span></span></div>
+<div><span style="font-family: 'Andale Mono';"><span style="color: rgb(51, 51, 51);"><span style="background-color: transparent;">ip route add default via 192.0.2.1</span><br/></span></span></div>
+<div><span style="font-family: 'Andale Mono';"><span style="color: rgb(51, 51, 51);"><br/></span></span></div>
+<ul>
+<li>A netmask of 255.255.255.255 represents all bits are fixed and therefore will only route the give IP.</li>
+<li>A netmask of 0.0.0.0 means all bits are variable, in other words it is default route matching every IP address.</li>
+<li><span style="color: rgb(69, 69, 69); text-align: left; background-color: rgb(255, 255, 255);">In other words, there cannot be a bit set to 1 in the destination if the corresponding bit in the subnet mask is a 0.</span></li>
+</ul>
+</div>
+<div><br/></div>
+<div>Any packets come in from 10.x.x.x they will be masked out prior to hitting the default route.</div>
+<div><br/></div>
+<div style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif; margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div>route add -net 10.0.0.0 netmask 255.0.0.0 reject</div>
+</div>
+</div>
+<div style="margin: 0px 0px 15px; border-width: 0px; outline: 0px; vertical-align: baseline;">
+<div>You can also specify in the route command the interface it should use using the IF paramter:</div>
+</div>
+<div style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif; margin: 0px 0px 1.5em; border: 1px solid silver; outline: 0px; vertical-align: baseline; background-color: rgb(249, 249, 249); color: rgb(17, 0, 0); overflow-x: auto; overflow-y: hidden; width: 585px;">
+<div style="padding: 2px 4px; border-width: 0px; outline: 0px; vertical-align: top; background-color: transparent;">
+<div>route add 10.12.0.0 mask 255.255.0.0 10.12.0.1 IF 2</div>
+</div>
+</div>
+<div>Examples -</div>
+<div><br/></div>
+<div>Add or delete route on OSX</div>
+<div>
+<div><br/></div>
+</div>
+<div><code style="word-wrap: break-word; font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important; font-size: 1em !important; color: rgb(255, 20, 147) !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; background-position: initial initial !important; background-repeat: initial initial !important;"><span style="font-size: 1em;"><span style="font-size: 1em;">sudo</span></span></code> <span style="font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;"><code style="word-wrap: break-word; font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important; font-size: 1em !important; color: black !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; background-position: initial initial !important; background-repeat: initial initial !important;"><span style="font-size: 1em;"><span style="font-size: 1em;">route -n add -net 10.1.0.0</span></span></code><code style="word-wrap: break-word; font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important; font-size: 1em !important; color: black !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; background-position: initial initial !important; background-repeat: initial initial !important;"><span style="font-size: 1em;"><span style="font-size: 1em;">/16</span></span></code><span style="color: rgb(51, 51, 51);"><span style="font-size: 1em;"><span style="font-size: 1em;"> </span></span></span> <code style="word-wrap: break-word; font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important; font-size: 1em !important; color: black !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; border: 0px !important; bottom: auto !important; float: none !important; left: auto !important; outline: 0px !important; overflow: visible !important; right: auto !important; top: auto !important; vertical-align: baseline !important; box-sizing: content-box !important; direction: ltr !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-image: none !important; background-position: initial initial !important; background-repeat: initial initial !important;"><span style="font-size: 1em;"><span style="font-size: 1em;">172.19.10.1</span></span></code></span></div>
+<div><span style="font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;"><span style="font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;"><span style="font-size: 1em;"><span style="color: rgb(148, 33, 146);">sudo</span> route delete -net 10.1</span></span><br/></span></div>
+<div><br/></div>
+<div>MS-CWOPA Exchange</div>
+<div><br/></div>
+<div><font face="Andale Mono">route add  206.0.0.0 mask 255.0.0.0 172.19.10.1 METRIC 15</font></div>
+<div><br/></div>
+<div>Update metric for JNET Wifi</div>
+<div><br/></div>
+<div><font face="Andale Mono">route change  0.0.0.0 mask 0.0.0.0 192.168.1.1 METRIC 18</font></div>
+<div><br/></div>
+<div>Acess Cwopa LAN</div>
+<div><br/></div>
+<div><font face="Andale Mono">route add  10.0.0.0 mask 255.0.0.0 172.19.10.1 METRIC 15</font><font face="Andale Mono"><br/></font></div>
+<div><font face="Andale Mono"><br/></font></div>
+<div><a href="http://www.thegeekstuff.com/2012/04/route-examples/">http://www.thegeekstuff.com/2012/04/route-examples/</a><font face="Andale Mono"><br/></font></div>
+</en-note></p>
+
+  </div>
+
+  
+</article>
+
+    </div>
+    <div class="wrapper-footer">
+    <div class="container">
+        <footer class="footer">
+            
+
+<a href="http://facebook.com/dhval.mudawal"><i class="svg-icon facebook"></i></a>
+
+<a href="http://github.com/dhval"><i class="svg-icon github"></i></a>
+
+<a href="http://linkedin.com/in/dhvalmudawal"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="http://twitter.com/jekyllrb"><i class="svg-icon twitter"></i></a>
+
+
+        </footer>
+    </div>
+    <p style="text-align:center;">    <small>
+    © I do not claim ownership of this content. Please send me a <a href="/suggestions">message</a>, if this infringes any copyright. 
+    </small> </p>
+</div>
+</body>
+
+</html>
